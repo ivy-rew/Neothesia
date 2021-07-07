@@ -13,7 +13,7 @@ jobs:
       - uses: actions-rs/cargo@v1
         with:
           command: build
-          args: --release 
+          args: --release --no-default-features --features record
       - name: Chmod +x
         run: chmod +x target/release/neothesia
       - name: zip binary
